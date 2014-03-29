@@ -15,6 +15,9 @@ public:
     //Destructor
     ~Chromosome();
 
+    // Add genes/groups to chromosome, decide on heirarchy l8r
+    bool addGene(Gene* newGene);
+
 private:
 
 protected:
