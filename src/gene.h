@@ -37,6 +37,7 @@ public:
     enum Trait  { DOMINANT, RECESSESIVE };
 private:
     Trait dominant;
+    bool standAlone;    ///< For checking if the gene is single, or part of a network
 
 protected:
     // property of gene
