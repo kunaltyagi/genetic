@@ -35,9 +35,22 @@ public:
 
     //enums
     enum Trait  { DOMINANT, RECESSESIVE };
+    enum Type   { DNA, RNS };
+    enum Bit    { T, G, A, C, U };  //all even combine, all odd combine, T not used if RNA is on
+    void addBit(Bit newBit)
+    {
+        _sequence.push_back(_BitToChar[newBit]);
+    }
+    std::string getSequence()
+    {
+        return _sequence;
+    }
 private:
-    Trait dominant;
-    bool standAlone;    ///< For checking if the gene is single, or part of a network
+    static const char _BitToChar[6] = "TGACU";
+    Trait _dominantNature;
+    Type _chemicalComposition;
+    bool _standAlone;    ///< For checking if the gene is single, or part of a network, maybe something to make the network
+    std::string _sequence;
 
 protected:
     // property of gene

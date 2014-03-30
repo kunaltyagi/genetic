@@ -2,6 +2,7 @@
 #define _GROUP_H_
 
 #include <string>
+#include <vector>
 
 class Group
 {
@@ -16,14 +17,6 @@ public:
 
 private:
     std::string name;
-    //Implement a vector list here? dubious
-    typedef struct structGene
-    {
-        Gene* next;
-        Gene* previous;
-        Gene* gene;
-    }structGene;
-    structGene* head;
-    structGene* tail;
+    std::vector<Gene> geneGroup;
 };
 #endif
